@@ -1,0 +1,59 @@
+{
+  "name": "@disberse/smart-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/Disberse/smart-contracs#readme",
+  "description": "Smart contracts for the Disberse project",
+  "keywords": [
+    "Disberse",
+    "contracts",
+    "Ethereum"
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Disberse/smart-contracts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Disberse/smart-contracts.git"
+  },
+  "engines": {
+    "node": ">=10.16.0",
+    "npm": ">=6.9.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "/contracts"
+  ],
+  "dependencies": {
+    "openzeppelin-solidity": "^2.3.0"
+  },
+  "scripts": {
+    "dockerize:1": "MIGRATION=1 scripts/dockerize.sh",
+    "dockerize:2": "MIGRATION=2 scripts/dockerize.sh",
+    "dockerize": "npm run dockerize:1",
+    "compile": "npm run compile:contracts",
+    "compile:contracts": "npx truffle compile",
+    "clean": "scripts/clean.sh",
+    "migrate": "npx truffle migrate --network ganache --reset",
+    "migrate:1": "MIGRATION=1 npm run migrate",
+    "migrate:2": "MIGRATION=2 npm run migrate"
+  },
+  "devDependencies": {
+    "@0x/sol-coverage": "^3.0.9",
+    "@0x/subproviders": "^5.0.1",
+    "chai": "^4.2.0",
+    "dotenv": "^8.0.0",
+    "eslint": "^6.1.0",
+    "ganache-cli": "^6.6.0",
+    "openzeppelin-test-helpers": "^0.4.2",
+    "solhint": "^2.2.0",
+    "truffle": "^5.0.32",
+    "truffle-hdwallet-provider": "^1.0.16",
+    "web3": "^1.2.1",
+    "web3-provider-engine": "^15.0.0",
+    "web3-utils": "^1.2.1"
+  }
+}
