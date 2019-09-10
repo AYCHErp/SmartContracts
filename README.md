@@ -14,4 +14,5 @@ The current seed data options are defined in [migrations/2\_deploy\_contracts](.
 - `npm run dockerize`
 
 #### Run a specific migration
-- `npm run migrate:{migration_number}`, where `{migration_number}` represents the specific seed data you would like to deploy. You must be running an Ethereum node locally on port 8545.
+- `npm run migrate:{migration_number}`
+- where `{migration_number}` represents the specific seed data you would like to deploy. You must be running an Ethereum node locally on port 8545.
